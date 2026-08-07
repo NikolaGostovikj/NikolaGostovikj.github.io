@@ -326,6 +326,10 @@ main {
   color: var(--text-muted);
 }
 
+section[id] {
+  scroll-margin-top: 84px;
+}
+
 .hero {
   padding-block: var(--space-6) var(--space-5);
 }
@@ -442,13 +446,9 @@ main {
   padding-block: var(--space-4);
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   gap: var(--space-3);
-}
-
-.footer-inner p {
-  font-size: 0.85rem;
 }
 
 .social-links {
@@ -496,11 +496,6 @@ main {
   .nav {
     position: relative;
     flex-wrap: wrap;
-  }
-
-  .footer-inner {
-    flex-direction: column;
-    align-items: flex-start;
   }
 
   .hero-inner {

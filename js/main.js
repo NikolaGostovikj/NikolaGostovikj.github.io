@@ -44,26 +44,31 @@
     });
   }
 
-  function currentSection() {
-    var path = window.location.pathname;
-    if (path === "/" || path === "/index.html") return "home";
-    if (path.indexOf("/projects") === 0) return "projects";
-    if (path.indexOf("/research") === 0) return "research";
-    if (path.indexOf("/blog") === 0) return "blog";
-    if (path.indexOf("/about") === 0) return "about";
-    if (path.indexOf("/contact") === 0) return "contact";
-    return null;
-  }
+  function initScrollSpy() {
+    var links = document.querySelectorAll(".nav-list a[data-section]");
+    if (!links.length || !window.IntersectionObserver) return;
 
-  function initActiveNavLink() {
-    var links = document.querySelectorAll(".nav-list a");
-    var section = currentSection();
-    if (!section) return;
-
+    var sections = [];
     links.forEach(function (link) {
-      if (link.getAttribute("data-section") === section) {
-        link.setAttribute("aria-current", "page");
-      }
+      var section = document.getElementById(link.getAttribute("data-section"));
+      if (section) sections.push(section);
+    });
+    if (!sections.length) return;
+
+    var observer = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          links.forEach(function (link) { link.removeAttribute("aria-current"); });
+          var active = document.querySelector('.nav-list a[data-section="' + entry.target.id + '"]');
+          if (active) active.setAttribute("aria-current", "page");
+        });
+      },
+      { rootMargin: "-40% 0px -55% 0px", threshold: 0 }
+    );
+
+    sections.forEach(function (section) {
+      observer.observe(section);
     });
   }
 
@@ -77,7 +82,7 @@
   document.addEventListener("DOMContentLoaded", function () {
     initThemeToggle();
     initMobileNav();
-    initActiveNavLink();
+    initScrollSpy();
     initFooterYear();
   });
 })();
