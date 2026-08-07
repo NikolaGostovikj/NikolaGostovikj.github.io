@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nikola Gostovikj — Portfolio</title>
+  <meta name="description" content="Personal portfolio of Nikola Gostovikj — projects, research, and writing.">
+  <link rel="canonical" href="https://nikolagostovikj.github.io/">
+  <meta property="og:title" content="Nikola Gostovikj — Portfolio">
+  <meta property="og:description" content="Personal portfolio of Nikola Gostovikj — projects, research, and writing.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nikolagostovikj.github.io/">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/style.css">
+  <script>
+    (function () {
+      var stored = localStorage.getItem('theme');
+      var theme = stored || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+  <script src="/js/main.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a href="/" class="logo">NG</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-list" id="navList">
+        <li><a href="/" data-section="home">Home</a></li>
+        <li><a href="/projects.html" data-section="projects">Projects</a></li>
+        <li><a href="/research.html" data-section="research">Research</a></li>
+        <li><a href="/blog/" data-section="blog">Blog</a></li>
+        <li><a href="/about.html" data-section="about">About</a></li>
+        <li><a href="/contact.html" data-section="contact">Contact</a></li>
+      </ul>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section hero">
+      <div class="container hero-inner">
+        <div class="avatar-frame">
+          <img src="/assets/images/profile.svg" alt="Nikola Gostovikj">
+        </div>
+        <div class="hero-text">
+          <p class="eyebrow">Welcome</p>
+          <h1>Hi, I'm Nikola Gostovikj.</h1>
+          <p>[One or two sentences about who you are and what you do go here — e.g. software engineer / student interested in X, Y, and Z.]</p>
+          <div class="btn-row" style="margin-top: 1.5rem;">
+            <a href="/projects.html" class="btn btn--primary">View Projects</a>
+            <a href="/contact.html" class="btn btn--ghost">Get in Touch</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tight">
+      <div class="container">
+        <div class="grid">
+          <a class="card" href="/projects.html">
+            <h3>Projects</h3>
+            <p>What I've built.</p>
+          </a>
+          <a class="card" href="/research.html">
+            <h3>Research</h3>
+            <p>What I've studied.</p>
+          </a>
+          <a class="card" href="/blog/">
+            <h3>Blog</h3>
+            <p>What I've written.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Nikola Gostovikj. Built with plain HTML, CSS &amp; JS.</p>
+      <div class="social-links">
+        <a href="https://github.com/NikolaGostovikj" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55v-2.15c-3.2.7-3.87-1.36-3.87-1.36-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.17.08 1.78 1.2 1.78 1.2 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18.92-.26 1.91-.39 2.89-.39.98 0 1.97.13 2.89.39 2.21-1.49 3.18-1.18 3.18-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.09 0 4.43-2.7 5.41-5.27 5.69.41.36.78 1.08.78 2.18v3.23c0 .3.21.66.79.55A10.51 10.51 0 0023.5 12c0-6.27-5.23-11.5-11.5-11.5z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/nikola-gostovikj-99b4262b7" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 110-4.13 2.07 2.07 0 010 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+        </a>
+        <a href="mailto:your-email@example.com" aria-label="Email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 6l10 7 10-7"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
