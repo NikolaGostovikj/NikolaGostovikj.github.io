@@ -11,8 +11,8 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://nikolagostovikj.github.io/">
   <meta name="twitter:card" content="summary">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
   <script>
     (function () {
       var stored = localStorage.getItem('theme');
@@ -32,7 +32,7 @@
       <ul class="nav-list" id="navList">
         <li><a href="#about" data-section="about">About</a></li>
         <li><a href="#projects" data-section="projects">Projects</a></li>
-        <li><a href="#research" data-section="research">Research</a></li>
+        <li><a href="#research" data-section="research">Research Articles</a></li>
         <li><a href="#contact" data-section="contact">Contact</a></li>
       </ul>
       <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
@@ -104,8 +104,37 @@
       <div class="container">
         <p class="eyebrow">Writing</p>
         <h2>Research</h2>
-        <div class="empty-state">
-          <p>Coming soon.</p>
+        <div>
+          <ul class="paper-list">
+            <li>
+              <div class="paper-row">
+                <h3>Particle Simulator</h3>
+                <a href="./assets/pdfs/Particle_Simulator.pdf" download class="btn btn--ghost btn--sm">Download</a>
+              </div>
+              <p>A Java-based particle physics simulator exploring charged-particle interactions across sequential, parallel, and distributed execution modes.</p>
+            </li>
+            <li>
+              <div class="paper-row">
+                <h3>Cardiovascular Disease Prediction Using Machine Learning</h3>
+                <a href="./assets/pdfs/CardiovascularDiseaseML.pdf" download class="btn btn--ghost btn--sm">Download</a>
+              </div>
+              <p>Comparing Logistic Regression, Random Forest, and Artificial Neural Network models for predicting cardiovascular disease risk from patient data.</p>
+            </li>
+            <li>
+              <div class="paper-row">
+                <h3>Lempel-Ziv Song Compression</h3>
+                <a href="./assets/pdfs/LZWAlgorithm.pdf" download class="btn btn--ghost btn--sm">Download</a>
+              </div>
+              <p>Implementing LZW lossless compression on raw WAV audio in two languages and benchmarking the result against the original MP3.</p>
+            </li>
+            <li>
+              <div class="paper-row">
+                <h3>On Certain Infection Problems of Some Graphs</h3>
+                <a href="./assets/pdfs/ResearchPaperGraph.pdf" download class="btn btn--ghost btn--sm">Download</a>
+              </div>
+              <p>Studying the infection number of cubic circulant graphs under a deterministic threshold-based contagion model.</p>
+            </li>
+          </ul>
         </div>
       </div>
     </section>

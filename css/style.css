@@ -283,6 +283,11 @@ main {
   gap: var(--space-3);
 }
 
+.btn--sm {
+  padding: 0.35rem 0.9rem;
+  font-size: 0.8rem;
+}
+
 .card {
   background: var(--card-bg);
   border: 1px solid var(--border);
@@ -309,6 +314,41 @@ main {
   gap: var(--space-2);
   margin-top: auto;
   padding-top: var(--space-2);
+}
+
+.paper-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.paper-list li {
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--border);
+}
+
+.paper-list li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.paper-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-2);
+}
+
+.paper-row h3 {
+  margin: 0;
+  flex: 1;
+  min-width: 0;
+}
+
+.paper-row .btn {
+  flex-shrink: 0;
+  width: 110px;
+  justify-content: center;
 }
 
 .tag {
@@ -503,3 +543,4 @@ section[id] {
     align-items: flex-start;
   }
 }
+
